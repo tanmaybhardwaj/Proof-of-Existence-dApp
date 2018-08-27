@@ -132,5 +132,9 @@ Instead it Oraclize services to get current time stamp which is independent of B
 
 Contract Blockproof.sol has been deployed to Rinkeby Network, details of which are inside deployed_address.txt file.
 
+**Browser Friendly**
+
+The design of the dApp is very minimal and mobile friendly. It can be easliy viewed on web3 enabled mobile browsers. deployed_address.txt file.
+
 **This dApp uses services of third party applications like Infura for IPFS, Oraclize as Oracle to get timestamp and mLab database**
 **as an Off-Chain storage. Depending on the server availability the dApp may take time to process a request. In case it gets** **stuck, please try reloading the page. In case of any issues please reach out to me at tannmay@gmail.com**
