@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Blockproof</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="app/stylesheets/app.css">
+    <script src="./app.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Blockproof</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mobile-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="all-proofs.html">
+                            All Proofs
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Create Proof -->
+    <div class="create-profile">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 m-auto">
+                    <h1 class="display-4 text-center">Create Proof</h1>
+                    <p class="lead text-center">Let's get some information to create proof of existence for your document</p>
+                    <small class="d-block pb-3">* = required field</small>
+                    <div style="display: none;" class="alert alert-success" id="msg"></div>
+                    <div style="display: none;" class="alert alert-danger" id="fail"></div>
+                    <form id="add-proof-to-proofs">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-lg" placeholder="* Title" id="proof-title" name="title" maxlength="15"
+                                required />
+                            <small class="form-text text-muted">Provide a unique title. Maximum 15 characters accepted. </small>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control form-control-lg" placeholder="Remarks" id="proof-remarks" name="remarks" maxlength="40"></textarea>
+                            <small class="form-text text-muted">Few remarks about the document. Maximum 40 characters accepted.</small>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-lg" placeholder="Tag" id="proof-tags" name="tags" maxlength="10" style=text-transform:capitalize
+                            />
+                            <small class="form-text text-muted">Add a unique tag to the file. Maximum 10 characters accepted.</small>
+                        </div>
+                        <div class="form-group">
+                            <input type="file" class="form-control form-control-lg" placeholder="File" id="proof-file" name="proof" required/>
+                            <small class="form-text text-muted">Upload file (supported formats : .jpg, .jpeg, .img., .doc,
+                                .docx, .ppt)
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <img id="loader" src="https://loading.io/spinners/double-ring/lg.double-ring-spinner.gif">
+                        </div>
+                        <button type="submit" id="createproofbutton" class="btn btn-info btn-block mt-4" />Create Proof</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5 p-4 text-center">
+        Copyright &copy; 2018 Blockproof
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+Etherscan URL:
+https://rinkeby.etherscan.io/tx/0x295b5ac4f219be80928d73bcb044906c34308d0564e4a9f32d343c19d01eb198
+
+
+Contract Address on Rinkeby:
+0x8bc727a98d543b4f433781ea8bc71badf8960069 
+
+
+Transaction Hash:
+0x295b5ac4f219be80928d73bcb044906c34308d0564e4a9f32d343c19d01eb198
+
+
+
