@@ -116,7 +116,7 @@ contract Blockproof  is usingOraclize {
 /// @param _prooftags : tags given to the document sent from front end
 /// @return  None return parameters
     function createProof (string _title, string _ipfshash, string _proofremarks, string _prooftags)
-        payable public {        
+        payable public stopInEmergency {        
     assert ((bytes(_title).length > 0) && (bytes(_title).length <= proofTitleLength));
     assert ((bytes(_ipfshash).length > 0) && (bytes(_ipfshash).length == proofIpfsHashLength));
     assert (bytes(_proofremarks).length <= proofRemarksLength);
@@ -138,7 +138,7 @@ contract Blockproof  is usingOraclize {
 /// @return existingProof.timestamp : Timestamp 
 /// @return existingProof.creator : Address of the creator
 /// @return existingProof.ipfshash : Hash of the document
-    function getDetailsByIndex (uint _proofId) view public 
+    function getDetailsByIndex (uint _proofId) view public stopInEmergency
         returns (uint, address, string)
     {
         Proof memory existingProof = idToProof[_proofId];
@@ -151,7 +151,7 @@ contract Blockproof  is usingOraclize {
     }
     
 /// @notice This function will send Oraclize request to get current time stamp 
-    function update() payable {
+    function update() payable stopInEmergency{
         var gasLimit = 200000;
         oraclize_query("WolframAlpha", "timestamp now", gasLimit);
     }
@@ -168,7 +168,7 @@ contract Blockproof  is usingOraclize {
     
 /// @notice This function will store proof related details in the 'Proof' mapping 
 /// @param _proofTimeStamp : Timestamp 
-    function _saveTheProof(uint _proofTimeStamp) private  {    
+    function _saveTheProof(uint _proofTimeStamp) private stopInEmergency  {    
     Proof memory newProof = Proof(proofId, _proofTimeStamp, proofCreator, proofIpfsHash); 
     idToProof[proofId]=newProof;
     newProofCreated(proofId, proofCreator, proofTitle, proofIpfsHash, proofRemarks, proofTags, _proofTimeStamp);

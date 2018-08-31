@@ -56,11 +56,17 @@ Node version must be equal to or greater than 8.0.0.
    truffle migrate --reset
    ```
 
+6. Test the smart contract by running below command.
+
+   ```javascript
+   truffle test
+   ```
+
    **Please note that Oraclize services charge Ether for query execution which is taken from contract balance**
    **The contract is deployed with 10 Ether as coded in 2_deploy_contracts.js file. In case the balance is exhausted,**
    **the application may not work as expected. In that case either transfer Ether to the contract or deploy it again.**
 
-6. Run servers for front-end and back-end by running below command
+7. Run servers for front-end and back-end by running below command
    ```javascript
    npm run dev
    ```
@@ -87,8 +93,11 @@ to destroy the contract.
 **Ownership**
 
 Modifiers have been used to restrict access/usage of below functions only to contract owner:
+
 withdraw : To withdraw funds (if any) from the contract
+
 kill : To destroy the contract
+
 toggle_active : To enable or disable functions in case of circuit breaker situations
 
 **Security**
